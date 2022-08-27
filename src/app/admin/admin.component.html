@@ -1,0 +1,137 @@
+<div class="flex flex-col space-y-2 my-2 px-2">
+    <table class="h-auto w-full">
+      <thead class="border">
+        <tr>
+          <th class="border w-1/2 ">President</th>
+          <th class="border w-1/2 ">Voix</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr class="border" *ngFor="let presi of resultatpresident">
+          <td class="border w-1/2 ">{{presi.prenom}} {{presi.nom}} </td>
+          <td class="border w-1/2 ">{{presi.voix}} /27</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="h-auto w-full">
+      <thead class="border">
+        <tr>
+          <th class="border w-1/2 ">President Relation Exterieure</th>
+          <th class="border w-1/2">Voix</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr class="border" *ngFor="let item2 of resultatorga">
+          <td class="border w-1/2 py-1 px-1">{{item2.prenom}}{{item2.nom}} </td>
+          <td class="border w-1/2 py-1 px-1">{{item2.voix}}/27</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="h-auto w-full">
+      <thead class="border">
+        <tr>
+          <th class="border w-1/2">President Commission  Pedagogique</th>
+          <th class="border w-1/2">Voix</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr class="border" *ngFor="let item3 of resultatpcp">
+          <td class="border w-1/2">{{item3.prenom}}{{item3.nom}} </td>
+          <td class="border w-1/2">{{item3.voix}}/27</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="h-auto w-full">
+      <thead class="border">
+        <tr>
+          <th class="border w-1/2">Vice-President</th>
+          <th class="border w-1/2">Voix</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr class="border" *ngFor="let item5 of resultatvicepre">
+          <td class="border w-1/2">{{item5.prenom}} {{item5.nom}} </td>
+          <td class="border w-1/2">{{item5.voix}}/27</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="h-auto w-full">
+      <thead class="border">
+        <tr>
+          <th class="border w-1/2">Secretaire Géeneral</th>
+          <th class="border w-1/2">Voix</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr class="border" *ngFor="let item8 of resultatSG">
+          <td class="border w-1/2">{{item8.prenom}} {{item8.nom}} </td>
+          <td class="border w-1/2">{{item8.voix}}/27</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="h-auto w-full">
+      <thead class="border">
+        <tr>
+          <th class="border w-1/2">President Commission Culturelle</th>
+          <th class="border w-1/2">Voix</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr class="border" *ngFor="let item9 of resultatPCSC">
+          <td class="border w-1/2">{{item9.prenom}} {{item9.nom}} </td>
+          <td class="border w-1/2">{{item9.voix}}/27</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="h-auto w-full">
+      <thead class="border">
+        <tr>
+          <th class="border w-1/2">Tresorier</th>
+          <th class="border w-1/2">Voix</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr class="border" *ngFor="let item10 of resultatTresorie">
+          <td class="border w-1/2" >{{item10.prenom}} {{item10.nom}} </td>
+          <td class="border w-1/2">{{item10.voix}}/27</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="h-auto w-full">
+      <thead class="border">
+        <tr>
+          <th class="border w-1/2">President Organisation</th>
+          <th class="border w-1/2">Voix</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr class="border" *ngFor="let item4 of resultatpco">
+          <td class="border w-1/2">{{item4.prenom}} {{item4.nom}} </td>
+          <td class="border w-1/2">{{item4.voix}}/27</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="h-auto w-full">
+      <thead class="border">
+        <tr>
+          <th class="border w-1/2">Taux de partcipation</th>
+          <th class="border w-1/2">Taux</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr class="border">
+          <td class="border w-1/2">27 Candidats inscrits </td>
+          <td class="border w-1/2">25/27</td>
+        </tr>
+      </tbody>
+    </table>
+</div>
