@@ -166,6 +166,7 @@ export class ListecandidatComponent implements OnInit {
       VP:sessionStorage.getItem('Vpchoisi'),
       CULTUREL:sessionStorage.getItem('Pculturelchosi'),
       Treso:sessionStorage.getItem('tresorier'),
+      SAG:sessionStorage.getItem('SAGchosi'),
       emailelecteur:sessionStorage.getItem('mailuser')
     }
     this.candidat.posterchoix().subscribe(data=>{
