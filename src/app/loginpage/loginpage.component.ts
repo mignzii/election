@@ -52,7 +52,7 @@ export class LoginpageComponent implements OnInit {
           icon: 'error',
           title: 'Oops...',
           text: "Vous n'êtes pas autorisé à voter",
-          footer: '<a href="">Why do I have this issue?</a>'
+
         })
       }
     })

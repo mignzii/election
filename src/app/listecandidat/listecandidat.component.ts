@@ -149,7 +149,8 @@ export class ListecandidatComponent implements OnInit {
         },
         hideClass: {
           popup: 'animate__animated animate__fadeOutUp'
-        }
+        },
+        footer: '<a href="/login">Login</a>'
       })
     })
   }
