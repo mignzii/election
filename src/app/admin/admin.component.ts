@@ -16,6 +16,7 @@ export class AdminComponent implements OnInit {
   public resultatpcp:any=[]
   public resultatpco:any=[]
   public resultatSG:any=[]
+  public resultatSAG:any=[]
   public resultatPCSC:any=[]
   public resultatTresorie:any=[]
   public allvotant:any=[]
@@ -44,6 +45,9 @@ export class AdminComponent implements OnInit {
       })
       this.resultatSG=this.resultatglobal.filter((ele:any)=>{
         return ele.poste=="SG"
+      })
+      this.resultatSAG=this.resultatglobal.filter((ele:any)=>{
+        return ele.poste=="SAG"
       })
       this.resultatPCSC=this.resultatglobal.filter((ele:any)=>{
         return ele.poste=="PCSC"

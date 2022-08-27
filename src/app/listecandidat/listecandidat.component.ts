@@ -16,6 +16,7 @@ export class ListecandidatComponent implements OnInit {
   public resultatpcp:any=[]
   public resultatpco:any=[]
   public resultatSG:any=[]
+  public resultatSAG:any=[]
   public resultatPCSC:any=[]
   public resultatTresorie:any=[]
   constructor(private candidat:CandidatService) { }
@@ -25,6 +26,7 @@ export class ListecandidatComponent implements OnInit {
   vp=false
   pdbout=false
   sgboutton=false
+  sagboutton=false
   cultboutton=false
   tresorbu=false
   chargement=false
@@ -50,6 +52,9 @@ export class ListecandidatComponent implements OnInit {
       })
       this.resultatSG=this.resultatglobal.filter((ele:any)=>{
         return ele.poste=="SG"
+      })
+      this.resultatSAG=this.resultatglobal.filter((ele:any)=>{
+        return ele.poste=="SAG"
       })
       this.resultatPCSC=this.resultatglobal.filter((ele:any)=>{
         return ele.poste=="PCSC"
@@ -107,8 +112,16 @@ export class ListecandidatComponent implements OnInit {
     sessionStorage.setItem('SGchosi',id)
     this.e=sessionStorage.getItem('SGchosi')
     console.log("Secretaire  choisi "+ ""+sessionStorage.getItem('SGchosi'))
+  }
+  public t:any
+  voterSAG(id:any){
+    this.sagboutton=true
+    sessionStorage.setItem('SAGchosi',id)
+    this.t=sessionStorage.getItem('SAGchosi')
+    console.log("Secretaire  Adjoint choisi "+ ""+sessionStorage.getItem('SAGchosi'))
 
   }
+
   public f:any
   votercult(id:any){
     this.sgboutton=true

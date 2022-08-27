@@ -62,7 +62,7 @@
     <table class="h-auto w-full">
       <thead class="border">
         <tr>
-          <th class="border w-1/2">Secretaire Géeneral</th>
+          <th class="border w-1/2">Secretaire Géneral</th>
           <th class="border w-1/2">Voix</th>
         </tr>
       </thead>
@@ -71,6 +71,21 @@
         <tr class="border" *ngFor="let item8 of resultatSG">
           <td class="border w-1/2">{{item8.prenom}} {{item8.nom}} </td>
           <td class="border w-1/2">{{item8.voix}}/24</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="h-auto w-full">
+      <thead class="border">
+        <tr>
+          <th class="border w-1/2">Secretaire Géneral Adjoint</th>
+          <th class="border w-1/2">Voix</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr class="border" *ngFor="let item15 of resultatSAG">
+          <td class="border w-1/2">{{item15.prenom}} {{item15.nom}} </td>
+          <td class="border w-1/2">{{item15.voix}}/24</td>
         </tr>
       </tbody>
     </table>

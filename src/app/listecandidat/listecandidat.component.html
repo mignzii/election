@@ -102,6 +102,22 @@
     </div>
 
   </div>
+  <p class="text-center my-2 font-medium underline py-1 md:text-2xl ">Poste de Secretaire Général Adjoint</p>
+  <div class="grid grid-cols-2 gap-x-1 gap-y-3 w-full px-2 md:grid-cols-3 ">
+    <div class="w-11/12 h-auto border border-red-300 px-1 py-2" [ngClass]="{'text-success':presidentorga.id==t}" *ngFor="let presidentorga of resultatSAG">
+      <div>
+        <img src="../../assets/image/{{presidentorga.id}}.jpg" class="rounded-sm flex items-center justify-center bg-cover " width="100px" height="100px" alt="">
+          <div class="flex flex-col space-y-1">
+            <p class="text-sm mt-1 md:text-xl">{{presidentorga.prenom}} {{presidentorga.nom}} </p>
+            <p  class="text-sm md:text-xl">{{presidentorga.ecole}}</p>
+            <div class="py-1">
+              <button [disabled]="sagboutton" (click)="voterSAG(presidentorga.id)" class="bg-red-500 px-2 md:text-xl ">Voter</button>
+            </div>
+          </div>
+      </div>
+    </div>
+
+  </div>
   <p class="text-center my-2 font-medium underline py-1 md:text-2xl">Poste de President Sportive et culturelle</p>
   <div class="grid grid-cols-2 gap-x-1 gap-y-3 w-full px-2 md:grid-cols-3 ">
     <div class="w-11/12 h-auto border border-red-300 px-1 py-2" [ngClass]="{'text-success':presidentorga.id==f }" *ngFor="let presidentorga of resultatPCSC">
