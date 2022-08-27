@@ -68,45 +68,60 @@ export class ListecandidatComponent implements OnInit {
     sessionStorage.setItem('idchoisi',id)
     console.log("President choisi "+""+ sessionStorage.getItem('idchoisi'))
   }
+  public d:any
   voterorga(id:any){
     this.actifboutonorga=true
     sessionStorage.setItem('idchoisiorga',id)
+    this.d=sessionStorage.getItem('idchoisiorga')
     console.log("President orga choisi "+ ""+sessionStorage.getItem('idchoisiorga'))
 
   }
+  public a:any
+  public b:any
+  public c:any
+
   voterPRE(id:any){
     this.actifprE=true
     sessionStorage.setItem('PREchoisi',id)
+    this.a=sessionStorage.getItem('PREchoisi'),
     console.log("Relation exterireur choisi "+ ""+sessionStorage.getItem('PREchoisi'))
 
   }
   voterVP(id:any){
     this.vp=true
     sessionStorage.setItem('Vpchoisi',id)
+    this.b=sessionStorage.getItem('Vpchoisi')
     console.log("Vp choisi "+ ""+sessionStorage.getItem('Vpchoisi'))
 
   }
   voterpeda(id:any){
     this.pdbout=true
     sessionStorage.setItem('pedachoisi',id)
+    this.c=sessionStorage.getItem('pedachoisi')
     console.log("President Peda choisi "+ ""+sessionStorage.getItem('pedachoisi'))
 
   }
+  public e:any
   voterSG(id:any){
     this.sgboutton=true
     sessionStorage.setItem('SGchosi',id)
+    this.e=sessionStorage.getItem('SGchosi')
     console.log("Secretaire  choisi "+ ""+sessionStorage.getItem('SGchosi'))
 
   }
+  public f:any
   votercult(id:any){
     this.sgboutton=true
     sessionStorage.setItem('Pculturelchosi',id)
+    this.f=sessionStorage.getItem('Pculturelchosi')
     console.log("President culturel choisi "+ ""+sessionStorage.getItem('Pculturelchosi'))
 
   }
+  public g:any
   votertresor(id:any){
     this.tresorbu=true
     sessionStorage.setItem('tresorier',id)
+    this.g=sessionStorage.getItem('tresorier')
     console.log("Tresorier choisi "+ ""+sessionStorage.getItem('tresorier'))
 
   }

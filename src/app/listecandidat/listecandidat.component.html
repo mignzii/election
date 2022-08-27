@@ -2,8 +2,9 @@
   <mat-spinner></mat-spinner>
 </div>
 <div class="bg-[#0C5B50] text-white " *ngIf="chargement">
-  <p class="text-center my-2 text-2xl text-white underline my-2 font-medium py-1 ">Lise des candidats par poste</p>
+  <p class="text-center my-2 text-2xl text-white underline  font-medium py-1 ">Lise des candidats par poste</p>
   <!-- Liste des candidats -->
+  <p class="text-center my-2 font-medium md:text-2xl underline py-1">Poste de President de L'AGEIS</p>
   <div class="grid grid-cols-2   gap-x-1 gap-y-3 w-full px-2 md:grid-cols-3 ">
 
     <div class="w-11/12 h-auto border border-red-300 px-1 py-2 hover:bg-[#0C5B50] " [ngClass]="{'text-success':actifbouton==true}" *ngFor="let president of resultatpresident">
@@ -23,8 +24,8 @@
 
   <p class="text-center my-2 font-medium md:text-2xl underline py-1">Poste de President Relation Exterieures</p>
   <div class="grid grid-cols-2 gap-x-1 gap-y-3 w-full px-2 md:grid-cols-3">
-    <div class="w-11/12 h-auto border border-red-300 px-1 py-2"  *ngFor="let presidentorga of resultatorga">
-      <div>
+    <div class="w-11/12 h-auto border border-red-300 px-1 py-2" [ngClass]="{'text-success':presidentorga.id==a }" *ngFor="let presidentorga of resultatorga;let i=index;">
+      <div >
         <img src="../../assets/image/{{presidentorga.id}}.jpg"  class="rounded-sm flex items-center justify-center bg-cover " width="100px" height="100px" alt="">
           <div class="flex flex-col space-y-1">
             <p class="text-sm md:text-xl mt-1">{{presidentorga.prenom}} {{presidentorga.nom}} </p>
@@ -39,7 +40,7 @@
   </div>
   <p class="text-center my-2 md:text-2xl font-medium underline py-1">Poste de Vice President</p>
   <div class="grid grid-cols-2 gap-x-1 gap-y-3 w-full px-2 md:grid-cols-3 ">
-    <div class="w-11/12 h-auto border border-red-300 px-1 py-2" *ngFor="let presidentorga of resultatvicepre">
+    <div class="w-11/12 h-auto border border-red-300 px-1 py-2" [ngClass]="{'text-success':presidentorga.id==b }" *ngFor="let presidentorga of resultatvicepre">
       <div>
         <img src="../../assets/image/{{presidentorga.id}}.jpg" class="rounded-sm flex items-center justify-center bg-cover " width="100px" height="100px" alt="">
           <div class="flex flex-col space-y-1">
@@ -55,7 +56,7 @@
   </div>
   <p class="text-center my-2 md:text-2xl font-medium underline py-1">Poste de President de la commission Pedagogique</p>
   <div class="grid grid-cols-2 gap-x-1 gap-y-3 w-full px-2 md:grid-cols-3 ">
-    <div class="w-11/12 h-auto border border-red-300 px-1 py-2" *ngFor="let presidentorga of resultatpcp">
+    <div class="w-11/12 h-auto border border-red-300 px-1 py-2" [ngClass]="{'text-success':presidentorga.id==c }" *ngFor="let presidentorga of resultatpcp">
       <div>
         <img src="../../assets/image/{{presidentorga.id}}.jpg" class="rounded-sm flex items-center justify-center bg-cover " width="100px" height="100px" alt="">
           <div class="flex flex-col space-y-1">
@@ -71,7 +72,7 @@
   </div>
   <p class="text-center my-2 font-medium underline md:text-2xl py-1">Poste de President de la commission Organisation</p>
   <div class="grid grid-cols-2 gap-x-1 gap-y-3 w-full px-2 md:grid-cols-3 ">
-    <div class="w-11/12 h-auto border border-red-300 px-1 py-2" *ngFor="let presidentorga of resultatpco">
+    <div class="w-11/12 h-auto border border-red-300 px-1 py-2" [ngClass]="{'text-success':presidentorga.id==d }" *ngFor="let presidentorga of resultatpco">
       <div>
         <img src="../../assets/image/{{presidentorga.id}}.jpg" class="rounded-sm flex items-center justify-center bg-cover " width="100px" height="100px" alt="">
           <div class="flex flex-col space-y-1">
@@ -87,7 +88,7 @@
   </div>
   <p class="text-center my-2 font-medium underline py-1 md:text-2xl ">Poste de Secretaire Général</p>
   <div class="grid grid-cols-2 gap-x-1 gap-y-3 w-full px-2 md:grid-cols-3 ">
-    <div class="w-11/12 h-auto border border-red-300 px-1 py-2" *ngFor="let presidentorga of resultatSG">
+    <div class="w-11/12 h-auto border border-red-300 px-1 py-2" [ngClass]="{'text-success':presidentorga.id==e }" *ngFor="let presidentorga of resultatSG">
       <div>
         <img src="../../assets/image/{{presidentorga.id}}.jpg" class="rounded-sm flex items-center justify-center bg-cover " width="100px" height="100px" alt="">
           <div class="flex flex-col space-y-1">
@@ -103,7 +104,7 @@
   </div>
   <p class="text-center my-2 font-medium underline py-1 md:text-2xl">Poste de President Sportive et culturelle</p>
   <div class="grid grid-cols-2 gap-x-1 gap-y-3 w-full px-2 md:grid-cols-3 ">
-    <div class="w-11/12 h-auto border border-red-300 px-1 py-2" *ngFor="let presidentorga of resultatPCSC">
+    <div class="w-11/12 h-auto border border-red-300 px-1 py-2" [ngClass]="{'text-success':presidentorga.id==f }" *ngFor="let presidentorga of resultatPCSC">
       <div>
         <img src="../../assets/image/{{presidentorga.id}}.jpg" class="rounded-sm flex items-center justify-center bg-cover " width="100px" height="100px" alt="">
           <div class="flex flex-col space-y-1">
@@ -119,8 +120,8 @@
   </div>
   <p class="text-center my-2 font-medium underline md:text-2xl py-1">Poste de Tresorier</p>
   <div class="grid grid-cols-2 gap-x-1 gap-y-3 w-full px-2 md:grid-cols-3 ">
-    <div class="w-11/12 h-auto border border-red-300 px-1 py-2" *ngFor="let presidentorga of resultatTresorie">
-      <div>
+    <div class="w-11/12 h-auto border border-red-300 px-1 py-2" [ngClass]="{'text-success':presidentorga.id==g }" *ngFor="let presidentorga of resultatTresorie">
+      <div >
           <img src="../../assets/image/{{presidentorga.id}}.jpg" class="rounded-sm flex items-center justify-center bg-cover " width="100px" height="100px" alt="">
           <div class="flex flex-col space-y-1">
             <p class="text-sm mt-1 md:text-xl">{{presidentorga.prenom}} {{presidentorga.nom}} </p>
