@@ -119,5 +119,20 @@
         </tr>
       </tbody>
     </table>
+    <table class="h-auto w-full">
+      <thead class="border">
+        <tr>
+          <th class="border w-1/2">Taux de participation</th>
+          <th class="border w-1/2">Voix</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr class="border" *ngFor="let item4 of allvotant">
+          <td class="border w-1/2">Nombre de votants </td>
+          <td class="border w-1/2">{{item4.votant}}/24</td>
+        </tr>
+      </tbody>
+    </table>
 
 </div>

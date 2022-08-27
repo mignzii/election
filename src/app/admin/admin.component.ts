@@ -18,8 +18,12 @@ export class AdminComponent implements OnInit {
   public resultatSG:any=[]
   public resultatPCSC:any=[]
   public resultatTresorie:any=[]
-
+  public allvotant:any=[]
   ngOnInit(): void {
+    this.candidat.getallvotant().subscribe(data=>{
+      this.allvotant=data
+      console.log(this.allvotant)
+    })
     this.candidat.getallcandidat().subscribe(data=>{
       console.log(data)
       this.resultatglobal=data
