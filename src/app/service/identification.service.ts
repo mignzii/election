@@ -7,8 +7,8 @@ import { Observable } from 'rxjs';
 })
 export class IdentificationService {
   identifiant:any
-  public url='http://localhost:6001/testmail'
-  public url2='http://localhost:6001/password'
+  public url='https://electionbackend.vercel.app/testmail'
+  public url2='https://electionbackend.vercel.app/password'
   constructor(private http:HttpClient) { }
 
  postuser():Observable<any>{
