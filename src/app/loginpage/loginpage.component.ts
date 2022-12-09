@@ -12,19 +12,20 @@ import { IdentificationService } from './../service/identification.service';
   styleUrls: ['./loginpage.component.css']
 })
 export class LoginpageComponent implements OnInit {
-
+connecte:boolean=false
 
   constructor(private route:Router , private identifiante:IdentificationService) { }
 
   ngOnInit(): void {
   }
   mailadress=new FormControl()
+  password=new FormControl()
 
    Toast = Swal.mixin({
     toast: true,
     position: 'top-end',
     showConfirmButton: false,
-    timer: 3000,
+    timer: 2000,
     timerProgressBar: true,
     didOpen: (toast) => {
 
@@ -43,9 +44,7 @@ export class LoginpageComponent implements OnInit {
           title: 'Signed in successfully'
         })
         sessionStorage.setItem('mailuser',this.mailadress.value)
-      setTimeout(()=>{
-        this.route.navigateByUrl(`listecandidat`)
-      },3500 )
+        this.connecte=true
       }
       else{
         Swal.fire({
@@ -60,8 +59,33 @@ export class LoginpageComponent implements OnInit {
 
   }
 
-affichepopu(){
+  connectuser(){
+    this.identifiante.identifiant={
+      password:this.password.value
+    }
+    this.identifiante.postuserpassword().subscribe(data=>{
+      console.log(data)
+      if(data){
+        this.Toast.fire({
+          icon: 'success',
+          title: 'Signed in successfully'
+        })
+        sessionStorage.setItem('mailuser',this.mailadress.value)
+      setTimeout(()=>{
+        this.route.navigateByUrl(`listecandidat`)
+      },3500 )
+      }
+      else{
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: "Votre mot de passe est incorrect",
 
-}
+        })
+      }
+    })
+
+
+  }
 
 }

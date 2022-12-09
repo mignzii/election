@@ -5,9 +5,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CandidatService {
-  public url='https://electionageis.herokuapp.com/participant'
-  public url2='https://electionageis.herokuapp.com/voter'
-  public url3='https://electionageis.herokuapp.com/allvotant'
+  public url='https://electionbackend.vercel.app/participant'
+  public url2='https://electionbackend.vercel.app/voter'
+  public url3='https://electionbackend.vercel.app/allvotant'
   public choixutilisateur:any
   constructor(private http:HttpClient) { }
 
