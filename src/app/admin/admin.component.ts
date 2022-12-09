@@ -31,30 +31,7 @@ export class AdminComponent implements OnInit {
       this.resultatpresident=this.resultatglobal.filter((element:any)=>{
         return element.poste=="President"
       })
-      this.resultatorga=this.resultatglobal.filter((ele:any)=>{
-        return ele.poste=="PRE"
-      })
-      this.resultatvicepre=this.resultatglobal.filter((ele:any)=>{
-        return ele.poste=="VP"
-      })
-      this.resultatpcp=this.resultatglobal.filter((ele:any)=>{
-        return ele.poste=="PCP"
-      })
-      this.resultatpco=this.resultatglobal.filter((ele:any)=>{
-        return ele.poste=="PCO"
-      })
-      this.resultatSG=this.resultatglobal.filter((ele:any)=>{
-        return ele.poste=="SG"
-      })
-      this.resultatSAG=this.resultatglobal.filter((ele:any)=>{
-        return ele.poste=="SAG"
-      })
-      this.resultatPCSC=this.resultatglobal.filter((ele:any)=>{
-        return ele.poste=="PCSC"
-      })
-      this.resultatTresorie=this.resultatglobal.filter((ele:any)=>{
-        return ele.poste=="Tresorier"
-      })
+      
       console.log(this.resultatpresident)
       console.log(this.resultatorga)
     })
