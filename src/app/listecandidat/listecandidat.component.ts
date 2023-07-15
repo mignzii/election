@@ -19,6 +19,8 @@ export class ListecandidatComponent implements OnInit {
   public resultatSAG:any=[]
   public resultatPCSC:any=[]
   public resultatTresorie:any=[]
+  selectedPresidentId=0
+  selectedPresidentcomId=0
   constructor(private candidat:CandidatService) { }
   actifbouton=false
   actifboutonorga=false
@@ -49,11 +51,13 @@ export class ListecandidatComponent implements OnInit {
 
   }
   voter(id:any){
+    this.selectedPresidentId=id
     this.actifbouton=true
     sessionStorage.setItem('idchoisi',id)
     console.log("President choisi "+""+ sessionStorage.getItem('idchoisi'))
   }
   voterPC(id:any){
+    this.selectedPresidentcomId=id
     this.actifboutonorga=true
     sessionStorage.setItem('idchoisicp',id)
     console.log("Commissaire  choisi "+""+ sessionStorage.getItem('idchoisicp'))

@@ -7,7 +7,7 @@
   <p class="text-center my-2 font-medium md:text-2xl underline py-1">Poste de President de L'AGEIS</p>
   <div class="grid grid-cols-2   gap-x-1 gap-y-3 w-full px-2 md:grid-cols-3 ">
 
-    <div class="w-11/12 h-auto border border-red-300 px-1 py-2 hover:bg-[#0C5B50] " [ngClass]="{'text-success':actifbouton==true}" *ngFor="let president of resultatpresident">
+    <div class="w-11/12 h-auto border border-red-300 px-1 py-2 hover:bg-[#0C5B50] " [class.text-success]="president.id === selectedPresidentId" *ngFor="let president of resultatpresident">
       <div>
         <img src="../../assets/image/{{president.id}}.jpg" class="rounded-sm flex items-center justify-center bg-cover " width="100px" height="100px" alt="">
           <div class="flex flex-col space-y-1">
@@ -24,7 +24,7 @@
   <p class="text-center my-2 font-medium md:text-2xl underline py-1">Poste de Commissaire au compte </p>
   <div class="grid grid-cols-2   gap-x-1 gap-y-3 w-full px-2 md:grid-cols-3 ">
 
-    <div class="w-11/12 h-auto border border-red-300 px-1 py-2 hover:bg-[#0C5B50] " [ngClass]="{'text-success':actifboutonorga==true}" *ngFor="let president of resultatorga">
+    <div class="w-11/12 h-auto border border-red-300 px-1 py-2 hover:bg-[#0C5B50] " [class.text-success]="president.id === selectedPresidentcomId" *ngFor="let president of resultatorga">
       <div>
         <img src="../../assets/image/{{president.id}}.jpg" class="rounded-sm flex items-center justify-center bg-cover " width="100px" height="100px" alt="">
           <div class="flex flex-col space-y-1">
