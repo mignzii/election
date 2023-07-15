@@ -14,7 +14,5 @@ export class IdentificationService {
  postuser():Observable<any>{
   return this.http.post(this.url,this.identifiant)
  }
- postuserpassword():Observable<any>{
-  return this.http.post(this.url2,this.identifiant)
- }
+
 }

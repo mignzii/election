@@ -19,7 +19,7 @@ connecte:boolean=false
   ngOnInit(): void {
   }
   mailadress=new FormControl()
-  password=new FormControl()
+
 
    Toast = Swal.mixin({
     toast: true,
@@ -45,6 +45,9 @@ connecte:boolean=false
         })
         sessionStorage.setItem('mailuser',this.mailadress.value)
         this.connecte=true
+        setTimeout(()=>{
+          this.route.navigateByUrl(`listecandidat`)
+        },3500 )
       }
       else{
         Swal.fire({
@@ -59,33 +62,7 @@ connecte:boolean=false
 
   }
 
-  connectuser(){
-    this.identifiante.identifiant={
-      password:this.password.value
-    }
-    this.identifiante.postuserpassword().subscribe(data=>{
-      console.log(data)
-      if(data){
-        this.Toast.fire({
-          icon: 'success',
-          title: 'Signed in successfully'
-        })
-        sessionStorage.setItem('mailuser',this.mailadress.value)
-      setTimeout(()=>{
-        this.route.navigateByUrl(`listecandidat`)
-      },3500 )
-      }
-      else{
-        Swal.fire({
-          icon: 'error',
-          title: 'Oops...',
-          text: "Votre mot de passe est incorrect",
 
-        })
-      }
-    })
 
 
   }
-
-}

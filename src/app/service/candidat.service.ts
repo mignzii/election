@@ -17,7 +17,7 @@ export class CandidatService {
   posterchoix():Observable<any>{
     return this.http.patch(this.url2,this.choixutilisateur)
   }
-getallvotant():Observable<any>{
-  return this.http.get(this.url3)
-}
+  getallvotant():Observable<any>{
+    return this.http.get(this.url3)
+  }
 }

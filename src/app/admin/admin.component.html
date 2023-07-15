@@ -14,6 +14,22 @@
         </tr>
       </tbody>
     </table>
+    <h1>President au compte</h1>
+    <table class="h-auto w-full">
+      <thead class="border">
+        <tr>
+          <th class="border w-1/2 ">President</th>
+          <th class="border w-1/2 ">Voix</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr class="border" *ngFor="let presi of resultatorga">
+          <td class="border w-1/2 ">{{presi.prenom}} {{presi.nom}} </td>
+          <td class="border w-1/2 ">{{presi.voix}} /64</td>
+        </tr>
+      </tbody>
+    </table>
   
    
    

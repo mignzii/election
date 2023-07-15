@@ -37,8 +37,11 @@ export class ListecandidatComponent implements OnInit {
       this.chargement=true
       this.resultatpresident=this.resultatglobal.filter((element:any)=>{
         return element.poste=="President"
+       
       })
-     
+      this.resultatorga=this.resultatglobal.filter((element:any)=>{
+        return element.poste=="commissaire aux comptes"
+      })
       console.log(this.resultatpresident)
       console.log(this.resultatorga)
     })
@@ -49,6 +52,11 @@ export class ListecandidatComponent implements OnInit {
     this.actifbouton=true
     sessionStorage.setItem('idchoisi',id)
     console.log("President choisi "+""+ sessionStorage.getItem('idchoisi'))
+  }
+  voterPC(id:any){
+    this.actifboutonorga=true
+    sessionStorage.setItem('idchoisicp',id)
+    console.log("Commissaire  choisi "+""+ sessionStorage.getItem('idchoisicp'))
   }
  annulervote(){
   this.actifbouton=false
@@ -75,6 +83,7 @@ export class ListecandidatComponent implements OnInit {
   validerchoix(){
     this.candidat.choixutilisateur={
       choixpresi:sessionStorage.getItem('idchoisi'),
+      choixpresicompte:sessionStorage.getItem('idchoisicp'),
       emailelecteur:sessionStorage.getItem('mailuser')
     }
     this.candidat.posterchoix().subscribe(data=>{

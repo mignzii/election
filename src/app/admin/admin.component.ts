@@ -13,12 +13,7 @@ export class AdminComponent implements OnInit {
   public resultatpresident:any=[]
   public resultatorga:any=[]
   public resultatvicepre:any=[]
-  public resultatpcp:any=[]
-  public resultatpco:any=[]
-  public resultatSG:any=[]
-  public resultatSAG:any=[]
-  public resultatPCSC:any=[]
-  public resultatTresorie:any=[]
+
   public allvotant:any=[]
   ngOnInit(): void {
     this.candidat.getallvotant().subscribe(data=>{
@@ -30,6 +25,9 @@ export class AdminComponent implements OnInit {
       this.resultatglobal=data
       this.resultatpresident=this.resultatglobal.filter((element:any)=>{
         return element.poste=="President"
+      })
+      this.resultatorga=this.resultatglobal.filter((element:any)=>{
+        return element.poste=="commissaire aux comptes"
       })
       
       console.log(this.resultatpresident)
