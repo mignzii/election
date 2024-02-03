@@ -20,15 +20,17 @@ export class AdminComponent implements OnInit {
       this.allvotant=data
       console.log(this.allvotant)
     })
+    this.candidat.getallelecteur().subscribe(data=>{
+      this.resultatorga=data
+      console.log(this.resultatorga)})
+    }
     this.candidat.getallcandidat().subscribe(data=>{
       console.log(data)
       this.resultatglobal=data
       this.resultatpresident=this.resultatglobal.filter((element:any)=>{
         return element.poste=="President"
       })
-      this.resultatorga=this.resultatglobal.filter((element:any)=>{
-        return element.poste=="commissaire aux comptes"
-      })
+  
       
       console.log(this.resultatpresident)
       console.log(this.resultatorga)
