@@ -10,23 +10,24 @@
 
         <tr class="border" *ngFor="let presi of resultatpresident">
           <td class="border w-1/2 ">{{presi.prenom}} {{presi.nom}} </td>
-          <td class="border w-1/2 ">{{presi.voix}} </td>
+          <td class="border w-1/2 text-center ">{{presi.voix}} </td>
         </tr>
       </tbody>
     </table>
-    <h1>President au compte</h1>
+    <h1 class="text center py-2 font-semibold text-xl">liste des candidats ayant déja voté</h1>
     <table class="h-auto w-full">
       <thead class="border">
         <tr>
-          <th class="border w-1/2 ">President</th>
-          <th class="border w-1/2 ">Voix</th>
+          <th class="border w-1/2 ">Nom</th>
+          <th class="border w-1/2 ">Prenom</th>
+          <th class="border w-1/2 ">Promo</th>
         </tr>
       </thead>
       <tbody>
 
         <tr class="border" *ngFor="let presi of resultatorga">
           <td class="border w-1/2 ">{{presi.prenom}} {{presi.nom}} </td>
-          <td class="border w-1/2 ">{{presi.voix}} </td>
+          <td class="border w-1/2 text-center ">{{presi.promo}} </td>
         </tr>
       </tbody>
     </table>
