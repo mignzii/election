@@ -2,9 +2,9 @@
   <mat-spinner></mat-spinner>
 </div>
 <div class="bg-[#0C5B50] text-white " *ngIf="chargement">
-  <p class="text-center my-2 text-2xl text-white underline  font-medium py-1 ">Lise des candidats par poste</p>
+
   <!-- Liste des candidats -->
-  <p class="text-center my-2 font-medium md:text-2xl underline py-1">Poste de President de L'AGEIS</p>
+  <p class="text-center my-2 font-medium md:text-2xl underline py-2">Poste de President  </p>
   <div class="grid grid-cols-2   gap-x-1 gap-y-3 w-full px-2 md:grid-cols-3 ">
 
     <div class="w-11/12 h-auto border border-red-300 px-1 py-2 hover:bg-[#0C5B50] " [class.text-success]="president.id === selectedPresidentId" *ngFor="let president of resultatpresident">
@@ -12,7 +12,7 @@
         <img src="../../assets/image/{{president.id}}.jpg" class="rounded-sm flex items-center justify-center bg-cover " width="100px" height="100px" alt="">
           <div class="flex flex-col space-y-1">
             <p class="text-sm md:text-xl mt-1">{{president.prenom}} {{president.nom}} </p>
-            <p  class="text-sm md:text-xl">{{president.ecole}}</p>
+        
             <div class="py-1">
               <button [disabled]="actifbouton" (click)="voter(president.id)" class="bg-red-500 px-2 md:text-xl ">Voter</button>
             </div>
@@ -21,23 +21,7 @@
     </div>
 
   </div>
-  <p class="text-center my-2 font-medium md:text-2xl underline py-1">Poste de Commissaire au compte </p>
-  <div class="grid grid-cols-2   gap-x-1 gap-y-3 w-full px-2 md:grid-cols-3 ">
-
-    <div class="w-11/12 h-auto border border-red-300 px-1 py-2 hover:bg-[#0C5B50] " [class.text-success]="president.id === selectedPresidentcomId" *ngFor="let president of resultatorga">
-      <div>
-        <img src="../../assets/image/{{president.id}}.jpg" class="rounded-sm flex items-center justify-center bg-cover " width="100px" height="100px" alt="">
-          <div class="flex flex-col space-y-1">
-            <p class="text-sm md:text-xl mt-1">{{president.prenom}} {{president.nom}} </p>
-            <p  class="text-sm md:text-xl">{{president.ecole}}</p>
-            <div class="py-1">
-              <button [disabled]="actifboutonorga" (click)="voterPC(president.id)" class="bg-red-500 px-2 md:text-xl ">Voter</button>
-            </div>
-          </div>
-      </div>
-    </div>
-
-  </div>
+ 
 
   <div class="flex space-x-1 justify-end mr-2">
 
