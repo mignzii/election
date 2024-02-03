@@ -23,8 +23,8 @@ export class AdminComponent implements OnInit {
     this.candidat.getallelecteur().subscribe(data=>{
       this.resultatorga=data
       console.log(this.resultatorga)})
-    }
-    this.candidat.getallcandidat().subscribe(data=>{
+    
+        this.candidat.getallcandidat().subscribe(data=>{
       console.log(data)
       this.resultatglobal=data
       this.resultatpresident=this.resultatglobal.filter((element:any)=>{
@@ -35,7 +35,9 @@ export class AdminComponent implements OnInit {
       console.log(this.resultatpresident)
       console.log(this.resultatorga)
     })
+    
+    }
+
 
   }
 
-}
